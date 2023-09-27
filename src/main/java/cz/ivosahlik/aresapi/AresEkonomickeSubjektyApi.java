@@ -2,9 +2,9 @@ package cz.ivosahlik.aresapi;
 
 import cz.ivosahlik.robotization.aresapi.EkonomickeSubjektyApi;
 
-public class AresEkonomickySubjektApi extends EkonomickeSubjektyApi {
+public class AresEkonomickeSubjektyApi extends EkonomickeSubjektyApi {
 
-    public AresEkonomickySubjektApi(ApiClient apiClient) {
+    public AresEkonomickeSubjektyApi(ApiClient apiClient) {
         super(apiClient);
     }
 }

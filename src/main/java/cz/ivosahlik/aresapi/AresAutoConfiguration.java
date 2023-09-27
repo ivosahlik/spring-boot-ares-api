@@ -15,18 +15,18 @@ public class AresAutoConfiguration {
     private String aresServerUrl;
 
     @Bean
-    public AresEkonomickySubjektApi aresEkonomickySubjektApi(RestTemplateBuilder restTemplateBuilder) {
+    public AresEkonomickeSubjektyApi aresEkonomickySubjektApi(RestTemplateBuilder restTemplateBuilder) {
         RestTemplate restTemplate = restTemplateBuilder
                 .build();
 
-        return new AresEkonomickySubjektApi(new ApiClient(restTemplate, aresServerUrl));
+        return new AresEkonomickeSubjektyApi(new ApiClient(restTemplate, aresServerUrl));
     }
 
     @Bean
-    public AresEkonomickySubjektResApi aresEkonomickySubjektResApi(RestTemplateBuilder restTemplateBuilder) {
+    public AresEkonomickeSubjektyResApi aresEkonomickySubjektResApi(RestTemplateBuilder restTemplateBuilder) {
         RestTemplate restTemplate = restTemplateBuilder
                 .build();
 
-        return new AresEkonomickySubjektResApi(new ApiClient(restTemplate, aresServerUrl));
+        return new AresEkonomickeSubjektyResApi(new ApiClient(restTemplate, aresServerUrl));
     }
 }

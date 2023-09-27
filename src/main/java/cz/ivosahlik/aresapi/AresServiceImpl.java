@@ -9,17 +9,17 @@ import org.springframework.stereotype.Service;
 @Service
 public class AresServiceImpl implements AresService {
 
-    private final AresEkonomickySubjektApi aresEkonomickySubjektApi;
+    private final AresEkonomickeSubjektyApi aresEkonomickeSubjektyApi;
 
-    private final AresEkonomickySubjektResApi aresEkonomickySubjektResApi;
+    private final AresEkonomickeSubjektyResApi aresEkonomickeSubjektyResApi;
 
     @Override
     public AresEkonomickySubjekt vratEkonomickySubjekt(String ico) {
-        return aresEkonomickySubjektApi.vratEkonomickySubjekt(ico);
+        return aresEkonomickeSubjektyApi.vratEkonomickySubjekt(ico);
     }
 
     @Override
     public AresEkonomickySubjektRes vratEkonomickySubjektRes(String ico) {
-        return aresEkonomickySubjektResApi.vratEkonomickySubjektRes(ico);
+        return aresEkonomickeSubjektyResApi.vratEkonomickySubjektRes(ico);
     }
 }

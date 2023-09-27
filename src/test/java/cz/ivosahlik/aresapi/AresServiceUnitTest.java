@@ -15,7 +15,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 class AresServiceUnitTest {
 
     @Mock
-    private AresEkonomickySubjektApi aresEkonomickySubjektApi;
+    private AresEkonomickeSubjektyApi aresEkonomickeSubjektyApi;
 
     @InjectMocks
     private AresServiceImpl aresEkonomickySubjektService;
@@ -24,7 +24,7 @@ class AresServiceUnitTest {
     @DisplayName("vratEkonomickySubjekt() GIVEN ico param SHOULD return AresEkonomickySubjekt")
     void vratEkonomickySubjekt() {
         aresEkonomickySubjektService.vratEkonomickySubjekt("08990042");
-        Mockito.verify(aresEkonomickySubjektApi).vratEkonomickySubjekt(Mockito.eq(new AresEkonomickySubjekt().getIco()));
+        Mockito.verify(aresEkonomickeSubjektyApi).vratEkonomickySubjekt(Mockito.eq(new AresEkonomickySubjekt().getIco()));
     }
 
 }

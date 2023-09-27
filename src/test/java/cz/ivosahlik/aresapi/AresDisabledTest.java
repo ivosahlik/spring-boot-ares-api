@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertNull;
 class AresDisabledTest {
 
     @Autowired(required = false)
-    private AresEkonomickySubjektApi aresEkonomickySubjektApi;
+    private AresEkonomickeSubjektyApi aresEkonomickeSubjektyApi;
 
     @Autowired(required = false)
     private AresService aresService;
@@ -23,7 +23,7 @@ class AresDisabledTest {
     @Test
     @DisplayName("ares-api module GIVEN ares disabled flag SHOULD not configure Ares beans")
     void disabled() {
-        assertNull(aresEkonomickySubjektApi);
+        assertNull(aresEkonomickeSubjektyApi);
         assertNull(aresService);
     }
 }
