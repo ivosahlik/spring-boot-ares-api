@@ -25,6 +25,7 @@ public class ApiClient {
     private final HttpHeaders defaultHeaders = new HttpHeaders();
     private final MultiValueMap<String, String> defaultCookies = new LinkedMultiValueMap<>();
 
+    @Getter
     private final String basePath;
 
     @Getter
@@ -39,14 +40,6 @@ public class ApiClient {
     public ApiClient(RestTemplate restTemplate, String basePath) {
         this.restTemplate = restTemplate;
         this.basePath = basePath;
-    }
-
-    /**
-     * Get the current base path
-     * @return String the base path
-     */
-    public String getBasePath() {
-        return basePath;
     }
 
     /**

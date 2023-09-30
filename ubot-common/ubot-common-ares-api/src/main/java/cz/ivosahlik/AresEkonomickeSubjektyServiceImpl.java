@@ -8,15 +8,9 @@ public class AresEkonomickeSubjektyServiceImpl implements AresEkonomickeSubjekty
 
     private final AresEkonomickeSubjektyApi aresEkonomickeSubjektyApi;
 
-//    private final AresEkonomickeSubjektyResApi aresEkonomickeSubjektyResApi;
-
     @Override
     public AresEkonomickySubjekt vratEkonomickySubjekt(String ico) {
         return aresEkonomickeSubjektyApi.vratEkonomickySubjekt(ico);
     }
 
-//    @Override
-//    public AresEkonomickySubjektRes vratEkonomickySubjektRes(String ico) {
-//        return aresEkonomickeSubjektyResApi.vratEkonomickySubjektRes(ico);
-//    }
 }

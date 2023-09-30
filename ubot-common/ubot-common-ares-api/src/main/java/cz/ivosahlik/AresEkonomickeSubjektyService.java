@@ -6,6 +6,4 @@ public interface AresEkonomickeSubjektyService {
 
     AresEkonomickySubjekt vratEkonomickySubjekt(String ico);
 
-//    AresEkonomickySubjektRes vratEkonomickySubjektRes(String ico);
-
 }
