@@ -19,7 +19,7 @@ public class AresController {
     private final AresEkonomickeSubjektyService aresEkonomickeSubjektyService;
     private final AresEkonomickeSubjektyResService aresEkonomickeSubjektyResService;
 
-//    http://localhost:8082/v1/ares-ekonomicky-subjekty?ico=XXXXXXXX
+    //    http://localhost:8082/v1/ares-ekonomicky-subjekty?ico=XXXXXXXX
     @GetMapping("/v1/ares-ekonomicky-subjekty")
     public ResponseEntity<AresEkonomickySubjekt> getAresEkonomickySubjekt(
             @RequestParam(name = REQUEST_ATTRIBUTE_ICO, required = false) String ico) {
