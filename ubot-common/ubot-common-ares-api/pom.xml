@@ -30,7 +30,7 @@
                             <modelNamePrefix>Ares</modelNamePrefix>
                             <templateDirectory>${project.basedir}/src/main/resources/swagger-templates</templateDirectory>
 
-                            <invokerPackage>cz.ivosahlik</invokerPackage>
+                            <invokerPackage>cz.ivosahlik.client</invokerPackage>
                             <generatorName>java</generatorName>
                             <library>resttemplate</library>
 

@@ -1,6 +1,8 @@
-package cz.ivosahlik;
+package cz.ivosahlik.service.impl;
 
+import cz.ivosahlik.api.AresEkonomickeSubjektyResApi;
 import cz.ivosahlik.model.AresEkonomickySubjektRes;
+import cz.ivosahlik.service.AresEkonomickeSubjektyResService;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

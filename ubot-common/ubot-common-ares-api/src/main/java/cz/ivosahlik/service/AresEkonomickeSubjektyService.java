@@ -1,4 +1,4 @@
-package cz.ivosahlik;
+package cz.ivosahlik.service;
 
 import cz.ivosahlik.model.AresEkonomickySubjekt;
 

@@ -1,4 +1,4 @@
-package cz.ivosahlik;
+package cz.ivosahlik.client;
 
 import lombok.Getter;
 import org.springframework.core.ParameterizedTypeReference;

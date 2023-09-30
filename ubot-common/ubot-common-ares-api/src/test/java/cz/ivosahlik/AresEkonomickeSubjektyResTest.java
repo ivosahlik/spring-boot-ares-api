@@ -1,5 +1,7 @@
 package cz.ivosahlik;
 
+import cz.ivosahlik.api.AresEkonomickeSubjektyResApi;
+import cz.ivosahlik.service.AresEkonomickeSubjektyResService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

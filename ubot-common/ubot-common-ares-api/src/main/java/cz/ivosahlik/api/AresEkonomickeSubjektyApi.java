@@ -1,6 +1,6 @@
-package cz.ivosahlik;
+package cz.ivosahlik.api;
 
-import cz.ivosahlik.api.EkonomickeSubjektyApi;
+import cz.ivosahlik.client.ApiClient;
 
 public class AresEkonomickeSubjektyApi extends EkonomickeSubjektyApi {
 

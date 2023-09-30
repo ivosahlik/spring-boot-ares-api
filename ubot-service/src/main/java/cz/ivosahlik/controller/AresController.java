@@ -1,7 +1,9 @@
-package cz.ivosahlik;
+package cz.ivosahlik.controller;
 
 import cz.ivosahlik.model.AresEkonomickySubjekt;
 import cz.ivosahlik.model.AresEkonomickySubjektRes;
+import cz.ivosahlik.service.AresEkonomickeSubjektyResService;
+import cz.ivosahlik.service.AresEkonomickeSubjektyService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +17,6 @@ public class AresController {
     private static final String REQUEST_ATTRIBUTE_ICO = "ico";
 
     private final AresEkonomickeSubjektyService aresEkonomickeSubjektyService;
-
     private final AresEkonomickeSubjektyResService aresEkonomickeSubjektyResService;
 
 //    http://localhost:8082/v1/ares-ekonomicky-subjekty?ico=XXXXXXXX

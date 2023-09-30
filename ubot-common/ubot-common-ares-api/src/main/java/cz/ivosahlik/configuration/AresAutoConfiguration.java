@@ -1,5 +1,12 @@
-package cz.ivosahlik;
+package cz.ivosahlik.configuration;
 
+import cz.ivosahlik.client.ApiClient;
+import cz.ivosahlik.api.AresEkonomickeSubjektyApi;
+import cz.ivosahlik.api.AresEkonomickeSubjektyResApi;
+import cz.ivosahlik.service.AresEkonomickeSubjektyResService;
+import cz.ivosahlik.service.AresEkonomickeSubjektyService;
+import cz.ivosahlik.service.impl.AresEkonomickeSubjektyResServiceImpl;
+import cz.ivosahlik.service.impl.AresEkonomickeSubjektyServiceImpl;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnExpression;
 import org.springframework.boot.web.client.RestTemplateBuilder;
