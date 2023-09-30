@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.client.RestTemplate;
 
-@ConditionalOnExpression("${feature.aresEkonomickySubjektApi.enabled:true}")
+@ConditionalOnExpression("${feature.ares.enabled:true}")
 @Configuration
 public class AresAutoConfiguration {
 
