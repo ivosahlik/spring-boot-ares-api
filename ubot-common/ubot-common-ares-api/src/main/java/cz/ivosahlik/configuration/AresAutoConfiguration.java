@@ -3,6 +3,7 @@ package cz.ivosahlik.configuration;
 import cz.ivosahlik.api.AresEkonomickeSubjektyApi;
 import cz.ivosahlik.api.AresEkonomickeSubjektyResApi;
 import cz.ivosahlik.client.ApiClient;
+import cz.ivosahlik.error.AresErrorHandler;
 import cz.ivosahlik.service.AresEkonomickeSubjektyResService;
 import cz.ivosahlik.service.AresEkonomickeSubjektyService;
 import cz.ivosahlik.service.impl.AresEkonomickeSubjektyResServiceImpl;
@@ -68,9 +69,11 @@ public class AresAutoConfiguration {
         if (proxyUrl != null && proxyPort != null) {
             restTemplate = restTemplateBuilder
                     .requestFactory(this::getSimpleClientHttpRequestFactory)
+                    .errorHandler(new AresErrorHandler())
                     .build();
         } else {
             restTemplate = restTemplateBuilder
+                    .errorHandler(new AresErrorHandler())
                     .build();
         }
     }
