@@ -1,5 +1,6 @@
 package cz.ivosahlik.configuration;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import cz.ivosahlik.api.AresEkonomickeSubjektyApi;
 import cz.ivosahlik.api.AresEkonomickeSubjektyResApi;
 import cz.ivosahlik.client.ApiClient;
@@ -37,14 +38,14 @@ public class AresAutoConfiguration {
     private RestTemplate restTemplate;
 
     @Bean
-    public AresEkonomickeSubjektyApi aresEkonomickySubjektApi(RestTemplateBuilder restTemplateBuilder) {
-        extracted(restTemplateBuilder);
+    public AresEkonomickeSubjektyApi aresEkonomickySubjektApi(RestTemplateBuilder restTemplateBuilder, ObjectMapper objectMapper) {
+        extracted(restTemplateBuilder, objectMapper);
         return new AresEkonomickeSubjektyApi(new ApiClient(restTemplate, aresServerUrl));
     }
 
     @Bean
-    public AresEkonomickeSubjektyResApi aresEkonomickySubjektResApi(RestTemplateBuilder restTemplateBuilder) {
-        extracted(restTemplateBuilder);
+    public AresEkonomickeSubjektyResApi aresEkonomickySubjektResApi(RestTemplateBuilder restTemplateBuilder, ObjectMapper objectMapper) {
+        extracted(restTemplateBuilder, objectMapper);
         return new AresEkonomickeSubjektyResApi(new ApiClient(restTemplate, aresServerUrl));
     }
 
@@ -65,15 +66,15 @@ public class AresAutoConfiguration {
         return requestFactory;
     }
 
-    private void extracted(RestTemplateBuilder restTemplateBuilder) {
+    private void extracted(RestTemplateBuilder restTemplateBuilder, ObjectMapper objectMapper) {
         if (proxyUrl != null && proxyPort != null) {
             restTemplate = restTemplateBuilder
                     .requestFactory(this::getSimpleClientHttpRequestFactory)
-                    .errorHandler(new AresErrorHandler())
+                    .errorHandler(new AresErrorHandler(objectMapper))
                     .build();
         } else {
             restTemplate = restTemplateBuilder
-                    .errorHandler(new AresErrorHandler())
+                    .errorHandler(new AresErrorHandler(objectMapper))
                     .build();
         }
     }
